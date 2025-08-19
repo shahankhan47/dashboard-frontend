@@ -1,0 +1,339 @@
+/* Dashboard.module.css */
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+/* Grid rows */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px 0 #0000000f;
+  padding: 1rem 1.25rem;
+}
+
+/* Metric card */
+.metricHeader {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.87);
+  margin-bottom: 0.5rem;
+}
+
+.metricValueRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.metricValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.metricSubtext {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: rgb(107, 114, 128);
+}
+
+.progress {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: #f1f1f1;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #58a942, #4c9239);
+  border-radius: 999px;
+  width: 0%;
+  transition: width 300ms ease;
+}
+
+/* Users with no projects */
+.listWrap {
+  max-height: 260px;
+  overflow: auto;
+  padding-top: 0.5rem;
+}
+
+.userList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.userItem {
+  padding: 0.6rem 0.8rem;
+  background: #f1f1f1;
+  color: rgb(55, 65, 81);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  border: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease;
+}
+
+.userItem:hover {
+  background: #e5e7eb;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.6rem;
+  background: #f1f1f1;
+  color: rgb(55, 65, 81);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  border: 1px solid #e5e7eb;
+}
+
+/* Obsolete projects */
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: rgb(55, 65, 81);
+}
+
+.select {
+  appearance: none;
+  width: 100%;
+  padding: 0.55rem 0.8rem;
+  background: #ffffff;
+  color: rgb(55, 65, 81);
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0 #0000000f;
+  outline: none;
+}
+
+/* Focus style */
+.select:focus {
+  border-color: #58a942;
+  box-shadow: 0 0 0 3px rgba(88, 169, 66, 0.15);
+}
+
+/* Option styling */
+.select option {
+  padding: 0.6rem;
+  font-size: 0.95rem;
+}
+
+/* Hover effect inside dropdown */
+.select option:hover {
+  background: #58a942; /* green */
+  color: #ffffff;      /* white font */
+}
+
+.deleteButton {
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+/* Section spacing helpers */
+.section {
+  margin-top: 1rem;
+}
+
+.actionButton {
+  background-color: #58a942 !important;   /* primary green */
+  color: #ffffff !important;             /* white text */
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.actionButton:hover {
+  background-color: #4c9239 !important;  /* darker green on hover */
+}
+
+.dataGridCard {
+  height: 500px;
+  width: 100%;
+}
+
+/* ✅ Customize DataGrid header */
+.dataGridCard .MuiDataGrid-columnHeaders {
+  background-color: #f3f4f6;  /* light gray header */
+  font-weight: 600;
+  color: #374151;             /* dark gray text */
+}
+
+/* ✅ Row hover effect */
+.dataGridCard .MuiDataGrid-row:hover {
+  background-color: #f9fafb;  /* slightly lighter gray on hover */
+  cursor: pointer;
+}
+
+/* ✅ Optional: tweak cell styles */
+.dataGridCard .MuiDataGrid-cell {
+  font-size: 0.9rem;
+  color: #111827;
+}
+
+/* ========================= */
+/* Login Page Styles */
+/* ========================= */
+
+.loginWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f8f9fa;
+}
+
+.loginCard {
+  width: 360px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.loginTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.87);
+  margin-bottom: 1.5rem;
+}
+
+.inputField {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: Inter, sans-serif;
+}
+
+.inputField:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.loginButton {
+  background-color: #58a942;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.loginButton:hover {
+  background-color: #4c9239;
+}
+
+/* ========================= */
+/* Popup Modal */
+/* ========================= */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 280px;
+}
+
+.modalTitle {
+  margin-bottom: 1rem;
+  color: #d9534f;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.modalButton {
+  background-color: #58a942;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.modalButton:hover {
+  background-color: #4c9239;
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .metricsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .twoColGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+}
