@@ -72,24 +72,24 @@ const getDashboardServices = async () => {
             owners,
             summaryUsers,
             conversationUsers,
-            threads,
-            pinsUsers
+            // threads,
+            // pinsUsers
         ] = await Promise.all([
             getAllProjects(),
             getProjects(),
             getOwners(),
             getSummaryUsers(),
             getConversationUsers(),
-            getChecklistAssistantThreads(),
-            getPinsUsers()
+            // getChecklistAssistantThreads(),
+            // getPinsUsers()
         ]);
     
         projects = projects?.projects || [];
         owners = owners?.owners || [];
         summaryUsers = summaryUsers || {};
         conversationUsers = conversationUsers || [];
-        threads = threads?.checklist_assistant_threads || [];
-        pinsUsers = pinsUsers || {};
+        // threads = threads?.checklist_assistant_threads || [];
+        // pinsUsers = pinsUsers || {};
 
         const totalProjects = projects.map(project => project.id);
         const summaryProjects = Object.keys(summaryUsers).map(user => summaryUsers[user]).flat(1);
