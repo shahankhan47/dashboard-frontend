@@ -32,20 +32,10 @@ jobs:
           cache: 'npm'
 
       # Install dependencies
-      - name: Install dependencies
-        run: npm install
-
-      - name: Debug Environment
+      - name: npm install, build
         run: |
-          echo "BACKEND_URL = $REACT_APP_BACKEND_URL"
-          echo "USERNAME = $REACT_APP_USERNAME"
-        env:
-          REACT_APP_BACKEND_URL: ${{ secrets.REACT_APP_BACKEND_URL }}
-          REACT_APP_USERNAME: ${{ secrets.REACT_APP_USERNAME }}
-
-      # Build React app (env vars injected here)
-      - name: Build React app
-        run: npm run build
+          npm install
+          npm run build --if-present
         env:
           REACT_APP_BACKEND_URL: ${{ secrets.REACT_APP_BACKEND_URL }}
           REACT_APP_PASSWORD: ${{ secrets.REACT_APP_PASSWORD }}

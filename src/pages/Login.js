@@ -5,10 +5,6 @@ import logo from "../assets/logo.png";
 const USERNAME = process.env.REACT_APP_USERNAME;
 const PASSWORD = process.env.REACT_APP_PASSWORD;
 
-console.log(USERNAME, PASSWORD);
-
-console.log(USERNAME, PASSWORD);
-
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
