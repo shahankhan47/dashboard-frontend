@@ -52,3 +52,4 @@ jobs:
           app_location: "/"         # React app root
           api_location: ""          # No backend API
           output_location: "build"  # Build output
+          skip_app_build: true
