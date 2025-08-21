@@ -42,6 +42,9 @@ jobs:
           REACT_APP_USERNAME: ${{ secrets.REACT_APP_USERNAME }}
           REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
 
+      - name: Copy staticwebapp.config.json into build output
+        run: cp staticwebapp.config.json build/
+
       # Deploy the already built folder
       - name: Deploy to Azure Static Web Apps
         id: builddeploy
